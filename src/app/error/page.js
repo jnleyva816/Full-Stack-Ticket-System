@@ -14,6 +14,9 @@ export default function ErrorPage({searchParams}){
       {!knownErrors.includes(type) && (
       <strong>Something went wrong. Please try again or contact support.</strong>
       )}
+      {type === "invalid_magiclink" && (
+      <strong>Sorry, this magic link is invalid. Maybe it expired? Please request a new one.</strong>
+      )}
       <br />
       <br />
       <Link href="/" role="button">
